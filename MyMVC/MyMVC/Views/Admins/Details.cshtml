@@ -1,0 +1,20 @@
+﻿@model MyMVC.Models.Admin
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Fullname;
+}
+<h1>
+    @Html.DisplayFor(model => model.Fullname)
+</h1>
+
+@foreach (var item in Model.Posts)
+{
+    <div class="Post">
+        <a href="~/Posts/Details/@item.Id"><h2>@item.Title</h2></a>
+        <a href="~/Admins/Details/@item.Admin.Username"><h3>@item.Admin.Fullname</h3></a>
+        <a href="~/Groups/Details/@item.Group.Id"><h3>@item.Group.Title</h3></a>
+        <span>@item.Date</span>
+        <p>@item.Abstract</p>
+    </div>
+}

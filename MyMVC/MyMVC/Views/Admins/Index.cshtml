@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyMVC.Models.Admin>
+
+@{
+    ViewBag.Title = "پست ها";
+}
+
+<p>
+    @Html.ActionLink("افزودن ادمین جدید", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            نام کاربری
+        </th>
+        <th>
+            نام و نام خانوادگی
+        </th>
+        <th>
+            تعداد پست های ارسال شده
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fullname)
+            </td>
+            <td>
+                @item.Posts.Count()
+            </td>
+            <td>
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.Username })
+                @Html.ActionLink("پست ها", "Details", new { id = item.Username })
+                @Html.ActionLink("حذف", "Delete", new { id = item.Username })
+            </td>
+        </tr>
+    }
+</table>

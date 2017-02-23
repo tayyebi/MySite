@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MyMVC.Models.Post>
+@{
+    ViewBag.Title = "خانه";
+}
+@foreach (var item in Model)
+{
+    <div class="Post">
+        <a href="~/Posts/Details/@item.Id"><h2>@item.Title</h2></a>
+        <a href="~/Admins/Details/@item.Admin.Username"><h3>@item.Admin.Fullname</h3></a>
+        <a href="~/Groups/Details/@item.Group.Id"><h3>@item.Group.Title</h3></a>
+        <span>@item.Date</span>
+        <p>@item.Abstract</p>      
+    </div>
+}

@@ -1,0 +1,13 @@
+﻿@model MyMVC.Models.Group
+
+@{
+    ViewBag.Title = "ایجاد گروه";
+}
+
+<form method="post">
+    <label for="Title">عنوان</label>
+    @Html.EditorFor(model => model.Title)
+
+    <input type="submit" value="افزودن" />
+    @Html.ActionLink("بازگشت", "Index")
+</form>

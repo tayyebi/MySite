@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MyMVC.Models.Group>
+
+@{
+    ViewBag.Title = "پست ها";
+}
+
+<p>
+    @Html.ActionLink("افزودن گروه جدید", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            عنوان
+        </th>
+        <th>
+            تعداد پست ها
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @item.Posts.Count()
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id })
+            @Html.ActionLink("جزئیات", "Details", new { id=item.Id })
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

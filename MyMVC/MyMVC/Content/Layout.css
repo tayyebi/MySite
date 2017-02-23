@@ -1,0 +1,264 @@
+﻿@font-face {
+    font-family: 'Main';
+    src: url('AdobeArabic-Regular.otf');
+}
+
+* {
+    font-family: 'Main' !important;
+}
+
+
+
+
+body {
+    background-color:#e6e6e6;
+    margin:0;
+    padding:0;
+}
+header, footer{
+    margin:0;
+    text-align:center;
+    display:block;
+    background-color:#002cff;
+}
+.Website{
+    color:#e6e6e6;
+}
+a{
+text-decoration:none;
+color:inherit;
+margin:.5em;
+padding:.5em;
+border:.1em solid #002cff;
+}
+a:hover, a:focus, a:active{
+    background-color:#002cff;
+    color:#e6e6e6;
+}
+.Menu{
+    background:#000000;
+    display:block;
+    right:0;
+    margin-right:0;
+    margin-left:auto;
+    width:20em;
+    height:30em;
+}
+.Menu a{
+    display:block;
+    color:#e6e6e6;
+}
+.Content{
+    padding: 1em;
+    margin-right:20em;
+    margin-top:-30em;
+     height:28em;
+     overflow-y:auto;
+}
+.Group a{
+    border-color:#e6e6e6;
+}
+.Warning{
+    display:block;
+    margin:2em auto 2em auto;
+    text-align:center;
+    width:80%;
+    color:red;
+}
+.Post{
+    display:block;
+    background-color:rgb(242,246,248);
+    border-style:dotted;
+    border-width:.1em;
+    border-color:#002cff;
+    margin-bottom:1em;
+    text-align:center;
+}
+.Post h2{
+text-align:center;
+}
+.Post h3{
+   display:inline-block;
+   margin:0 auto 0 auto;
+}
+.Post span, .Post p{
+    display:block;
+}
+.Post p{
+    text-align:right;
+}
+
+
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: .5em;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+    table tr:last-child td:last-child {
+        -moz-border-radius-bottomright: 0px;
+        -webkit-border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    table tr:first-child td:first-child {
+        -moz-border-radius-topleft: 0px;
+        -webkit-border-top-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    table tr:first-child td:last-child {
+        -moz-border-radius-topright: 0px;
+        -webkit-border-top-right-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    table tr:last-child td:first-child {
+        -moz-border-radius-bottomleft: 0px;
+        -webkit-border-bottom-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    table tr:hover td {
+    }
+
+    table tr:nth-child(odd) {
+        background-color: #e5e5e5;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+
+    table td {
+        vertical-align: middle;
+        border: 1px solid #000000;
+        border-width: 0px 1px 1px 0px;
+        text-align: left;
+        color: #000000;
+    }
+
+    table tr:last-child td {
+        border-width: 0px 1px 0px 0px;
+    }
+
+    table tr td:last-child {
+        border-width: 0px 0px 1px 0px;
+    }
+
+    table tr:last-child td:last-child {
+        border-width: 0px 0px 0px 0px;
+    }
+
+    table tr:first-child td {
+        background: -o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
+        background: -moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");
+        background: -o-linear-gradient(top,#cccccc,b2b2b2);
+        background-color: #cccccc;
+        border: 0px solid #000000;
+        text-align: center;
+        border-width: 0px 0px 1px 1px;
+        color: #000000;
+    }
+
+    table tr:first-child:hover td {
+        background: -o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
+        background: -moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");
+        background: -o-linear-gradient(top,#cccccc,b2b2b2);
+        background-color: #cccccc;
+    }
+
+    table tr:first-child td:first-child {
+        border-width: 0px 0px 1px 0px;
+    }
+
+
+
+
+
+
+
+    label{
+    display:block;
+}
+a{
+            text-decoration:none;
+        color:inherit;
+}
+table a, button, input, textarea, select {
+    width: auto;
+    padding: .2em;
+    direction: rtl;
+    font-size: 1.1em;
+    border:none;
+    border-radius:.1em;
+        max-width:95%;
+
+    background: rgb(226,226,226); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+}
+input, textarea, select, button{
+        display:block;
+    margin-top:.5em;
+    margin-bottom:.5em;
+}
+
+table a :hover, table a:focus, table a:active,
+button:hover, button:focus, button:active,
+input:hover, input:focus, input:active,
+select:hover, select:focus, select:active{
+    background: rgb(242,246,248); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */    
+    cursor:pointer;
+}
+
+select, option {
+    min-width: 20em;
+}
+
+img {
+}
+
+
+a:hover, a:active, a:focus {
+}
+
+input[type="submit"] {
+    padding: .75em;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    height: 2em;
+}
+
+input[type="number"] {
+    margin: 0;
+}
+span{
+    max-width:100%;
+}
+
+
+*, a, button, input, textarea, select {
+    -webkit-transition:filter 1s, width 1s, height 1s, background 1s, color 1s, font 1s, box-shadow 2s, -webkit-transform 1s, opacity 2s, border 1s;
+    transition:filter 1s, width 1s, height 1s, background 1s, color 1s, font 1s, box-shadow 2s, transform 1s, opacity 2s, border 1s;
+}
+    table tr:first-child td:last-child {
+        border-width: 0px 0px 1px 1px;
+    }

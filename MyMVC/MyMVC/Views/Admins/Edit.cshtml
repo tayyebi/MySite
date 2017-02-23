@@ -1,0 +1,18 @@
+﻿@model MyMVC.Models.Admin
+
+@{
+    ViewBag.Title = "ویرایش ادمین";
+}
+
+<form method="post">
+    @Html.HiddenFor(model => model.Username)
+
+    <label for="Fullname">کلمه ی عبور</label>
+    @Html.EditorFor(model => model.Password)
+
+    <label for="Fullname">نام و نام خانوادگی</label>
+    @Html.EditorFor(model => model.Fullname)
+
+    <input type="submit" value="ویرایش" />
+    @Html.ActionLink("بازگشت", "Index")
+</form>

@@ -1,0 +1,14 @@
+﻿@model MyMVC.Models.Group
+
+@{
+    ViewBag.Title = "حذف گروه";
+    ViewBag.Warning = "آیا از حذف این گروه اطمینان دارید؟";
+}
+
+<label>نام کاربری</label>
+@Html.DisplayFor(model => model.Title)
+
+<form method="post">
+    <input type="submit" value="حذف" />
+    @Html.ActionLink("بازگشت", "Index")
+</form>

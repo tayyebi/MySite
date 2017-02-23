@@ -1,0 +1,6 @@
+﻿@model IEnumerable<MyMVC.Models.Group>
+
+@foreach (var item in Model)
+{
+    @Html.ActionLink(" " + item.Title + " ", "Details", new { controller = "Groups", id = item.Id })
+}

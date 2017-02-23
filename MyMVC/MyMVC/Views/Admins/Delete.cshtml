@@ -1,0 +1,18 @@
+﻿@model MyMVC.Models.Admin
+
+@{
+    ViewBag.Title = "حذف ادمین";
+    ViewBag.Warning = "آیا از حذف این ادمین اطمینان دارید؟";
+}
+<label>نام کاربری</label>
+@Html.DisplayFor(model => model.Username)
+
+
+<label>نام و نام خانوادگی</label>
+@Html.DisplayFor(model => model.Fullname)
+
+
+<form method="post">
+    <input type="submit" value="حذف" />
+    @Html.ActionLink("بازگشت", "Index")
+</form>

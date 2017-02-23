@@ -1,0 +1,15 @@
+﻿@model MyMVC.Models.Group
+
+@{
+    ViewBag.Title = "ویرایش ادمین";
+}
+
+<form method="post">
+    @Html.HiddenFor(model => model.Id)
+
+    <label for="Fullname">عنوان</label>
+    @Html.EditorFor(model => model.Title)
+
+    <input type="submit" value="ویرایش" />
+    @Html.ActionLink("بازگشت", "Index")
+</form>

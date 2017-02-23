@@ -1,0 +1,11 @@
+﻿.Login input{
+    display:block;
+    width:20em;
+    padding:1em;
+    font-size:1.1em;
+    margin: 1em auto 0 auto;
+}
+input[type=submit]
+{
+    width:10em;
+}

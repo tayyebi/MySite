@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section AdminMenu{
+    <hr />
+    @Html.ActionLink("تغییر کلمه ی عبور", "Password", "Admin")
+    @Html.ActionLink("مدیریت دیگر ادمین ها", "Index", "Admins")
+    <hr />
+    @Html.ActionLink("گروه ها", "Index", "Groups")
+    @Html.ActionLink("پست ها", "Index", "Posts")
+}
+
+@RenderBody()

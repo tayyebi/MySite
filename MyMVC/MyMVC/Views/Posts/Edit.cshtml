@@ -1,0 +1,25 @@
+﻿@model MyMVC.Models.Post
+
+@{
+    ViewBag.Title = "ویرایش مطلب";
+}
+
+<form method="post">
+    @Html.HiddenFor(model => model.Id)
+
+    <label for="Title">عنوان</label>
+    @Html.EditorFor(model => model.Title)
+
+    <label for="Abstract">دیباچه</label>
+    @Html.EditorFor(model => model.Abstract)
+
+    <label for="Body">متن</label>
+    @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "MyMultiLineEditor" } })
+
+
+    <label for="GroupId">گروه</label>
+    @Html.DropDownList("GroupId")
+
+    <input type="submit" value="ارسال" />
+    @Html.ActionLink("بازگشت", "Index")
+</form>

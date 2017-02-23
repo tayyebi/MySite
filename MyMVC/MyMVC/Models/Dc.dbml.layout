@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Dc">
+  <DataContextMoniker Name="/DcDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a72262c5-ee49-4eeb-84ab-d8d46cb62ae1" absoluteBounds="0.875, 3.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DcDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4eb1140e-df72-4635-91fe-d2b0c9fc7f76" absoluteBounds="0.89, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6547568-7131-4de5-b0ab-a5b6435c075f" absoluteBounds="0.75, 1.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DcDataContext/Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="807d50a4-8267-49e5-81cc-9a7270983e04" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87d58332-d13c-4790-8a62-d948172ea5af" absoluteBounds="3.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DcDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="261310e6-12b6-498f-a977-c643e43e0e6e" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 3.25); (3.5 : 3.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DcDataContext/Admin/Admin_Post" />
+      <nodes>
+        <classShapeMoniker Id="a72262c5-ee49-4eeb-84ab-d8d46cb62ae1" />
+        <classShapeMoniker Id="87d58332-d13c-4790-8a62-d948172ea5af" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DcDataContext/Group/Group_Post" />
+      <nodes>
+        <classShapeMoniker Id="e6547568-7131-4de5-b0ab-a5b6435c075f" />
+        <classShapeMoniker Id="87d58332-d13c-4790-8a62-d948172ea5af" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

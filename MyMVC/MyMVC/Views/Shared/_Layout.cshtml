@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Layout.css" rel="stylesheet" />
+    @RenderSection("Head", false)
+</head>
+<body style="direction:rtl;">
+    <header>
+        <h1 class="Website">
+            سایت من
+        </h1>
+        <h2 class="Title">
+            @ViewBag.Title
+        </h2>
+        <div class="Group">
+            @Html.Action("Feed", "Groups")
+        </div>
+    </header>
+    @try
+    {
+        if (ViewBag.Warning != String.Empty)
+        {
+            <span class="Warning">@ViewBag.Warning</span>
+        }
+    }
+    catch { }
+    <div class="Menu">
+        <a href="~/">خانه</a>
+        <a href="~/Home/Login">ورود به سیستم</a>
+        @RenderSection("AdminMenu", false)
+    </div>
+    <div class="Content">
+        @RenderBody()
+    </div>
+    <footer>
+        @DateTime.Now.Year.ToString()
+        تمامی حقوق محفوظ است
+    </footer>
+</body>
+</html>

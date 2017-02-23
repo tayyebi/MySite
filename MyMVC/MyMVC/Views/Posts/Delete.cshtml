@@ -1,0 +1,27 @@
+﻿@model MyMVC.Models.Post
+
+@{
+    ViewBag.Title = "حذف گروه";
+    ViewBag.Warning = "آیا از حذف این گروه اطمینان دارید؟";
+}
+
+<label>نام کاربری</label>
+@Html.DisplayFor(model => model.Title)
+
+<label>فرستنده</label>
+@Html.DisplayFor(model => model.Admin.Fullname)
+
+<label>گروه</label>
+@Html.DisplayFor(model => model.Group.Title)
+
+
+<label>تاریخ</label>
+@Html.DisplayFor(model => model.Date)
+
+<label>چکیده</label>
+@Html.DisplayFor(model => model.Abstract)
+
+<form method="post">
+    <input type="submit" value="حذف" />
+    @Html.ActionLink("بازگشت", "Index")
+</form>

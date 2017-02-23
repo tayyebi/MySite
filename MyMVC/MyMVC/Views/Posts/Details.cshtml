@@ -1,0 +1,20 @@
+﻿@model MyMVC.Models.Post
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Title;
+}
+
+<div class="Post">
+    <h1>
+        @Html.DisplayFor(model => model.Title)
+    </h1>
+    <a href="~/Posts/Details/@Model.Id"><h2>@Model.Title</h2></a>
+    <a href="~/Admins/Details/@Model.Admin.Username"><h3>@Model.Admin.Fullname</h3></a>
+    <a href="~/Groups/Details/@Model.Group.Id"><h3>@Model.Group.Title</h3></a>
+    <span>@Model.Date</span>
+    <p>@Model.Abstract</p>
+    <div>
+        @Model.Body
+    </div>
+</div>
