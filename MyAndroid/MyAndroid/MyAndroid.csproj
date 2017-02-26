@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="About.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PostViewActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RexaAdapter1.cs" />
@@ -66,6 +67,7 @@
     <AndroidResource Include="Resources\layout\RexaListItem1.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\PostView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

@@ -12,18 +12,19 @@ namespace MyAndroid
         public string Title { get; set; }
         public string DateTime { get; set; }
     }
+
     [Activity(Label = "MyAndroid", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
 
+        public List<PostOnFirstPage> myPosts;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-
+            myPosts = new List<PostOnFirstPage>();
             SqlConnection con = new SqlConnection();
             con.ConnectionString = About.ConnectionString;
             con.Open();
@@ -32,12 +33,12 @@ namespace MyAndroid
             com.CommandText = "SELECT TOP 20 Id, Title, [Date] FROM [Post] ORDER BY [Date] DESC";
             SqlDataReader data = com.ExecuteReader();
 
-            List<PostOnFirstPage> myPosts = new List<PostOnFirstPage>();
 
             while (data.Read())
             {
                 myPosts.Add(new PostOnFirstPage
                 {
+                    Id = data["Id"].ToString(),
                     Title = data["Title"].ToString(),
                     DateTime = data["Date"].ToString()
                 });
@@ -58,7 +59,8 @@ namespace MyAndroid
 
         private void L1_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            // throw new System.NotImplementedException();
+            About.ThisPostId = myPosts[e.Position].Id;
+            StartActivity(typeof(PostViewActivity));
         }
     }
 }

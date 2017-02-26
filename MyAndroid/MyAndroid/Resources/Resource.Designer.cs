@@ -69,6 +69,18 @@ namespace MyAndroid
 			// aapt resource value: 0x7f050002
 			public const int textView2 = 2131034114;
 			
+			// aapt resource value: 0x7f050003
+			public const int textView3 = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int textView4 = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int textView5 = 2131034117;
+			
+			// aapt resource value: 0x7f050006
+			public const int textView6 = 2131034118;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -86,7 +98,10 @@ namespace MyAndroid
 			public const int Main = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int RexaListItem1 = 2130903041;
+			public const int PostView = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int RexaListItem1 = 2130903042;
 			
 			static Layout()
 			{

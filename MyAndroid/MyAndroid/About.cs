@@ -22,5 +22,6 @@ namespace MyAndroid
                 return @"Data Source=192.168.93.1, 1433;Initial Catalog=MySite;Persist Security Info=True;User ID=rexa;Password=1";
             }
         }
+        static public string ThisPostId { get; set; }
     }
 }
