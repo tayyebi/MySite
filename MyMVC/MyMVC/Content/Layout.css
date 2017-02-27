@@ -4,10 +4,8 @@
 }
 
 * {
-    font-family: 'Main' !important;
+    font-family: 'Main';
 }
-
-
 
 
 body {
@@ -17,7 +15,7 @@ body {
 }
 header, footer{
     margin:0;
-    text-align:center;
+    text-align:center;  
     display:block;
     background-color:#002cff;
 }

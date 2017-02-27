@@ -34,10 +34,10 @@ namespace MyMVC.Controllers
 
         // GET: Posts
         [Secure]
-        public ActionResult Index()
+        public ActionResult Index(int Id = 10)
         {
             var post = db.Posts;
-            return View(post.ToList());
+            return View(post.OrderByDescending(x=>x.Date).Take(Id).ToList());
         }
         // GET: Posts/Create
         [Secure]
@@ -94,6 +94,7 @@ namespace MyMVC.Controllers
         [HttpPost]
 
         [Secure]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "Id,Title,Date,Abstract,Body,AdminUsername,GroupId")] Post post)
         {
             if (ModelState.IsValid)

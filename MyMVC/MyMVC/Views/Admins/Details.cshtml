@@ -8,7 +8,7 @@
     @Html.DisplayFor(model => model.Fullname)
 </h1>
 
-@foreach (var item in Model.Posts)
+@foreach (var item in Model.Posts.OrderByDescending(x=>x.Date).Take(30))
 {
     <div class="Post">
         <a href="~/Posts/Details/@item.Id"><h2>@item.Title</h2></a>

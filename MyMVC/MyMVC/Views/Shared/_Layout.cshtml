@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery.min.js"></script>
     <link href="~/Content/Layout.css" rel="stylesheet" />
     @RenderSection("Head", false)
 </head>
@@ -39,5 +40,6 @@
         @DateTime.Now.Year.ToString()
         تمامی حقوق محفوظ است
     </footer>
+    @RenderSection("Scripts", false)
 </body>
 </html>

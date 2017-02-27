@@ -6,6 +6,7 @@
 
 <form method="post">
     @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.Date)
 
     <label for="Title">عنوان</label>
     @Html.EditorFor(model => model.Title)

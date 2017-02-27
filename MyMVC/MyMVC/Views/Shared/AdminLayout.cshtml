@@ -1,6 +1,10 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Head{
+    <script src="~/Lib/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: '.MyMultiLineEditor' });</script>
+}
 @section AdminMenu{
     <hr />
     @Html.ActionLink("تغییر کلمه ی عبور", "Password", "Admin")
@@ -11,3 +15,6 @@
 }
 
 @RenderBody()
+
+@section Scripts{
+}
