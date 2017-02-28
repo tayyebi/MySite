@@ -25,6 +25,7 @@ namespace MyAndroid
             SetContentView(Resource.Layout.Main);
 
             myPosts = new List<PostOnFirstPage>();
+
             SqlConnection con = new SqlConnection();
             con.ConnectionString = About.ConnectionString;
             con.Open();

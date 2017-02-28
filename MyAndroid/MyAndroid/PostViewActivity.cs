@@ -10,12 +10,17 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace MyAndroid
 {
     [Activity(Label = "PostViewActivity")]
     public class PostViewActivity : Activity
     {
+        public static string StripHTML(string input)
+        {
+            return Regex.Replace(input, "<.*?>", String.Empty);
+        }
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -47,7 +52,9 @@ namespace MyAndroid
                 admin.SetText(data["AdminUsername"].ToString(), TextView.BufferType.Normal);
                 date.SetText(data["Date"].ToString(), TextView.BufferType.Normal);
                 abst.SetText(data["Abstract"].ToString(), TextView.BufferType.Normal);
-                body.SetText(data["Body"].ToString(), TextView.BufferType.Normal);
+
+                string MyBody = StripHTML(data["Body"].ToString());
+                body.SetText(MyBody, TextView.BufferType.Normal);
             }
         }
     }
